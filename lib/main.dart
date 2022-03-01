@@ -1,7 +1,9 @@
-import 'package:flutter_components/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+import 'package:flutter_components/router/app_routes.dart';
+import 'package:flutter_components/theme/app_theme.dart';
+
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -15,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: AppRoutes.getAppRoutes(),
       // onGenerateRoute: ( settings ) => AppRoutes.onGenerateRoute(settings),
       onGenerateRoute: AppRoutes.onGenerateRoute,
+      theme: AppTheme.lightTheme,
     );
   }
 }
